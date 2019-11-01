@@ -1,0 +1,11 @@
+C:\Users\Thireach\source\repos\dentist_doctor\dentist_doctor\bin\Debug\dentist_doctor.exe.config
+C:\Users\Thireach\source\repos\dentist_doctor\dentist_doctor\bin\Debug\dentist_doctor.exe
+C:\Users\Thireach\source\repos\dentist_doctor\dentist_doctor\bin\Debug\dentist_doctor.pdb
+C:\Users\Thireach\source\repos\dentist_doctor\dentist_doctor\obj\Debug\dentist_doctor.csprojAssemblyReference.cache
+C:\Users\Thireach\source\repos\dentist_doctor\dentist_doctor\obj\Debug\dentist_doctor.frm_doc_code.resources
+C:\Users\Thireach\source\repos\dentist_doctor\dentist_doctor\obj\Debug\dentist_doctor.frm_doc_login.resources
+C:\Users\Thireach\source\repos\dentist_doctor\dentist_doctor\obj\Debug\dentist_doctor.frm_doc_patient_detail.resources
+C:\Users\Thireach\source\repos\dentist_doctor\dentist_doctor\obj\Debug\dentist_doctor.Properties.Resources.resources
+C:\Users\Thireach\source\repos\dentist_doctor\dentist_doctor\obj\Debug\dentist_doctor.csproj.GenerateResource.cache
+C:\Users\Thireach\source\repos\dentist_doctor\dentist_doctor\obj\Debug\dentist_doctor.exe
+C:\Users\Thireach\source\repos\dentist_doctor\dentist_doctor\obj\Debug\dentist_doctor.pdb
