@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\EventHandler.cs" />
+    <Compile Include="Class\GlobalVariable.cs" />
+    <Compile Include="DentistDataSet.cs">
+      <DependentUpon>DentistDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DentistDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DentistDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="frm_doc_action.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,20 +81,61 @@
     <Compile Include="frm_doc_login.Designer.cs">
       <DependentUpon>frm_doc_login.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_doc_patient_detail.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_doc_patient_detail.Designer.cs">
-      <DependentUpon>frm_doc_patient_detail.cs</DependentUpon>
-    </Compile>
     <Compile Include="frm_doc_treatment.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_doc_treatment.Designer.cs">
       <DependentUpon>frm_doc_treatment.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class\GlobalMethod.cs" />
+    <Compile Include="frm_edit_medicalHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_edit_medicalHistory.Designer.cs">
+      <DependentUpon>frm_edit_medicalHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_patient_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_patient_detail.Designer.cs">
+      <DependentUpon>frm_patient_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_patient_information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_patient_information.Designer.cs">
+      <DependentUpon>frm_patient_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_patient_prescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_patient_prescription.Designer.cs">
+      <DependentUpon>frm_patient_prescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_patient_treamentDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_patient_treamentDetail.Designer.cs">
+      <DependentUpon>frm_patient_treamentDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_patient_Xray.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_patient_Xray.Designer.cs">
+      <DependentUpon>frm_patient_Xray.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Grid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyMSB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyMSB.Designer.cs">
+      <DependentUpon>MyMSB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Class\StoreProcedure.cs" />
     <EmbeddedResource Include="frm_doc_action.resx">
       <DependentUpon>frm_doc_action.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,11 +148,29 @@
     <EmbeddedResource Include="frm_doc_login.resx">
       <DependentUpon>frm_doc_login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_doc_patient_detail.resx">
-      <DependentUpon>frm_doc_patient_detail.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frm_doc_treatment.resx">
       <DependentUpon>frm_doc_treatment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_edit_medicalHistory.resx">
+      <DependentUpon>frm_edit_medicalHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_patient_detail.resx">
+      <DependentUpon>frm_patient_detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_patient_information.resx">
+      <DependentUpon>frm_patient_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_patient_prescription.resx">
+      <DependentUpon>frm_patient_prescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_patient_treamentDetail.resx">
+      <DependentUpon>frm_patient_treamentDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_patient_Xray.resx">
+      <DependentUpon>frm_patient_Xray.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyMSB.resx">
+      <DependentUpon>MyMSB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +181,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DentistDataSet.xsc">
+      <DependentUpon>DentistDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DentistDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DentistDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DentistDataSet.xss">
+      <DependentUpon>DentistDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
