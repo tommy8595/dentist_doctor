@@ -24,7 +24,6 @@ namespace dentist
         public Grid()
         {
             AllowUserToAddRows = false;
-            AllowUserToDeleteRows = false;
             AllowUserToOrderColumns = false;
             EditMode = DataGridViewEditMode.EditOnKeystrokeOrF2;
             MultiSelect = false;

@@ -1,4 +1,6 @@
-﻿namespace dentist_doctor
+﻿using dentist;
+
+namespace dentist_doctor
 {
     partial class frm_patient_information
     {
@@ -29,9 +31,20 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TC = new System.Windows.Forms.TabControl();
             this.tabGI = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -75,9 +88,22 @@
             this.xray_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fungetPatientXrayByPatIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabDiag = new System.Windows.Forms.TabPage();
+            this.dgvDiag = new dentist.Grid();
+            this.teethnumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teethpointDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teethconditionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teethdetailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fungetPatientDiagnoseByIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabTP = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tpdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tp_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.docnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fungetAllPatientServiceBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.TabTd = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.fungetPatientTdByPatIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPs = new System.Windows.Forms.TabPage();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.psdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -96,14 +122,8 @@
             this.fun_getPatientXrayByPatIDTableAdapter = new dentist_doctor.DentistDataSetTableAdapters.fun_getPatientXrayByPatIDTableAdapter();
             this.fun_getAllPatientServiceTableAdapter = new dentist_doctor.DentistDataSetTableAdapters.fun_getAllPatientServiceTableAdapter();
             this.fun_getPrescriptionByPatIDTableAdapter = new dentist_doctor.DentistDataSetTableAdapters.fun_getPrescriptionByPatIDTableAdapter();
-            this.TabTd = new System.Windows.Forms.TabPage();
-            this.tpdateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tp_amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.docnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.fungetPatientTdByPatIDBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fun_getPatientTdByPatIDTableAdapter = new dentist_doctor.DentistDataSetTableAdapters.fun_getPatientTdByPatIDTableAdapter();
+            this.fun_getPatientDiagnoseByIDTableAdapter = new dentist_doctor.DentistDataSetTableAdapters.fun_getPatientDiagnoseByIDTableAdapter();
             this.TC.SuspendLayout();
             this.tabGI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fungetPatientByIDBindingSource)).BeginInit();
@@ -116,14 +136,17 @@
             this.tabXray.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fungetPatientXrayByPatIDBindingSource)).BeginInit();
+            this.tabDiag.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fungetPatientDiagnoseByIDBindingSource)).BeginInit();
             this.tabTP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fungetAllPatientServiceBindingSource)).BeginInit();
+            this.TabTd.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fungetPatientTdByPatIDBindingSource)).BeginInit();
             this.tabPs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fungetPrescriptionByPatIDBindingSource)).BeginInit();
-            this.TabTd.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fungetPatientTdByPatIDBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // TC
@@ -481,22 +504,39 @@
             // 
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.AllowUserToAddRows = false;
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(178)))), ((int)(((byte)(73)))));
-            this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(178)))), ((int)(((byte)(73)))));
+            this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.AutoGenerateColumns = false;
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn3,
             this.md_status});
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.DataSource = this.fun_getActiveMedicalHistoryForSpecificPaientBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.DefaultCellStyle = dataGridViewCellStyle3;
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.EnableHeadersVisualStyles = false;
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.Location = new System.Drawing.Point(3, 3);
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.Name = "fun_getActiveMedicalHistoryForSpecificPaientDataGridView";
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.ReadOnly = true;
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.RowTemplate.Height = 30;
+            this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.Size = new System.Drawing.Size(1297, 623);
             this.fun_getActiveMedicalHistoryForSpecificPaientDataGridView.TabIndex = 0;
             // 
@@ -545,6 +585,14 @@
             this.dgvOne.AllowUserToDeleteRows = false;
             this.dgvOne.AutoGenerateColumns = false;
             this.dgvOne.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvOne.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvOne.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvOne.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.patxraydateDataGridViewTextBoxColumn,
@@ -552,6 +600,14 @@
             this.patxraycodeDataGridViewTextBoxColumn,
             this.xray_id});
             this.dgvOne.DataSource = this.fungetPatientXrayByPatIDBindingSource;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvOne.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvOne.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvOne.Location = new System.Drawing.Point(3, 3);
             this.dgvOne.MultiSelect = false;
@@ -601,6 +657,7 @@
             // 
             // tabDiag
             // 
+            this.tabDiag.Controls.Add(this.dgvDiag);
             this.tabDiag.Location = new System.Drawing.Point(4, 38);
             this.tabDiag.Name = "tabDiag";
             this.tabDiag.Padding = new System.Windows.Forms.Padding(3);
@@ -608,6 +665,75 @@
             this.tabDiag.TabIndex = 2;
             this.tabDiag.Text = "Diagnosis";
             this.tabDiag.UseVisualStyleBackColor = true;
+            // 
+            // dgvDiag
+            // 
+            this.dgvDiag.AllowUserToAddRows = false;
+            this.dgvDiag.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(178)))), ((int)(((byte)(73)))));
+            this.dgvDiag.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvDiag.AutoGenerateColumns = false;
+            this.dgvDiag.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvDiag.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvDiag.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiag.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.teethnumberDataGridViewTextBoxColumn,
+            this.teethpointDataGridViewTextBoxColumn,
+            this.teethconditionDataGridViewTextBoxColumn,
+            this.teethdetailDataGridViewTextBoxColumn});
+            this.dgvDiag.DataSource = this.fungetPatientDiagnoseByIDBindingSource;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDiag.DefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvDiag.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDiag.Location = new System.Drawing.Point(3, 3);
+            this.dgvDiag.MultiSelect = false;
+            this.dgvDiag.Name = "dgvDiag";
+            this.dgvDiag.ReadOnly = true;
+            this.dgvDiag.RowTemplate.Height = 30;
+            this.dgvDiag.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDiag.Size = new System.Drawing.Size(1297, 623);
+            this.dgvDiag.TabIndex = 0;
+            // 
+            // teethnumberDataGridViewTextBoxColumn
+            // 
+            this.teethnumberDataGridViewTextBoxColumn.DataPropertyName = "teeth_number";
+            this.teethnumberDataGridViewTextBoxColumn.HeaderText = "លេខលំដាប់នៃធ្មេញ";
+            this.teethnumberDataGridViewTextBoxColumn.Name = "teethnumberDataGridViewTextBoxColumn";
+            this.teethnumberDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // teethpointDataGridViewTextBoxColumn
+            // 
+            this.teethpointDataGridViewTextBoxColumn.DataPropertyName = "teeth_point";
+            this.teethpointDataGridViewTextBoxColumn.HeaderText = "ទីតាំងលំអិតធ្មេញ";
+            this.teethpointDataGridViewTextBoxColumn.Name = "teethpointDataGridViewTextBoxColumn";
+            this.teethpointDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // teethconditionDataGridViewTextBoxColumn
+            // 
+            this.teethconditionDataGridViewTextBoxColumn.DataPropertyName = "teeth_condition";
+            this.teethconditionDataGridViewTextBoxColumn.HeaderText = "ស្ថានភាពធ្មេញ";
+            this.teethconditionDataGridViewTextBoxColumn.Name = "teethconditionDataGridViewTextBoxColumn";
+            this.teethconditionDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // teethdetailDataGridViewTextBoxColumn
+            // 
+            this.teethdetailDataGridViewTextBoxColumn.DataPropertyName = "teeth_detail";
+            this.teethdetailDataGridViewTextBoxColumn.FillWeight = 200F;
+            this.teethdetailDataGridViewTextBoxColumn.HeaderText = "ពត៌មានលំអិត";
+            this.teethdetailDataGridViewTextBoxColumn.Name = "teethdetailDataGridViewTextBoxColumn";
+            this.teethdetailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fungetPatientDiagnoseByIDBindingSource
+            // 
+            this.fungetPatientDiagnoseByIDBindingSource.DataMember = "fun_getPatientDiagnoseByID";
+            this.fungetPatientDiagnoseByIDBindingSource.DataSource = this.dentistDataSet;
             // 
             // tabTP
             // 
@@ -624,10 +750,18 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(178)))), ((int)(((byte)(73)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(178)))), ((int)(((byte)(73)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.tpdateDataGridViewTextBoxColumn,
@@ -635,6 +769,14 @@
             this.tp_amount,
             this.docnameDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.fungetAllPatientServiceBindingSource;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.MultiSelect = false;
@@ -645,10 +787,67 @@
             this.dataGridView1.Size = new System.Drawing.Size(1297, 623);
             this.dataGridView1.TabIndex = 118;
             // 
+            // tpdateDataGridViewTextBoxColumn
+            // 
+            this.tpdateDataGridViewTextBoxColumn.DataPropertyName = "tp_date";
+            this.tpdateDataGridViewTextBoxColumn.FillWeight = 50F;
+            this.tpdateDataGridViewTextBoxColumn.HeaderText = "កាលបរិច្ឆេទ";
+            this.tpdateDataGridViewTextBoxColumn.Name = "tpdateDataGridViewTextBoxColumn";
+            this.tpdateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sdnameDataGridViewTextBoxColumn
+            // 
+            this.sdnameDataGridViewTextBoxColumn.DataPropertyName = "sd_name";
+            this.sdnameDataGridViewTextBoxColumn.HeaderText = "សេវាកម្ម";
+            this.sdnameDataGridViewTextBoxColumn.Name = "sdnameDataGridViewTextBoxColumn";
+            this.sdnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tp_amount
+            // 
+            this.tp_amount.DataPropertyName = "tp_amount";
+            this.tp_amount.HeaderText = "ចំនូន";
+            this.tp_amount.Name = "tp_amount";
+            this.tp_amount.ReadOnly = true;
+            // 
+            // docnameDataGridViewTextBoxColumn
+            // 
+            this.docnameDataGridViewTextBoxColumn.DataPropertyName = "doc_name";
+            this.docnameDataGridViewTextBoxColumn.FillWeight = 70F;
+            this.docnameDataGridViewTextBoxColumn.HeaderText = "ឈ្មោះវេជ្ជបណ្ឌិត";
+            this.docnameDataGridViewTextBoxColumn.Name = "docnameDataGridViewTextBoxColumn";
+            this.docnameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
             // fungetAllPatientServiceBindingSource
             // 
             this.fungetAllPatientServiceBindingSource.DataMember = "fun_getAllPatientService";
             this.fungetAllPatientServiceBindingSource.DataSource = this.dentistDataSet;
+            // 
+            // TabTd
+            // 
+            this.TabTd.Controls.Add(this.richTextBox1);
+            this.TabTd.Location = new System.Drawing.Point(4, 38);
+            this.TabTd.Name = "TabTd";
+            this.TabTd.Padding = new System.Windows.Forms.Padding(3);
+            this.TabTd.Size = new System.Drawing.Size(1303, 629);
+            this.TabTd.TabIndex = 6;
+            this.TabTd.Text = "Treatment Detail";
+            this.TabTd.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fungetPatientTdByPatIDBindingSource, "td_des", true));
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(1297, 623);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
+            // fungetPatientTdByPatIDBindingSource
+            // 
+            this.fungetPatientTdByPatIDBindingSource.DataMember = "fun_getPatientTdByPatID";
+            this.fungetPatientTdByPatIDBindingSource.DataSource = this.dentistDataSet;
             // 
             // tabPs
             // 
@@ -665,10 +864,18 @@
             // 
             this.dataGridView2.AllowUserToAddRows = false;
             this.dataGridView2.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(178)))), ((int)(((byte)(73)))));
-            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(178)))), ((int)(((byte)(73)))));
+            this.dataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.psdateDataGridViewTextBoxColumn,
@@ -676,6 +883,14 @@
             this.psunitDataGridViewTextBoxColumn,
             this.psamountDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.fungetPrescriptionByPatIDBindingSource;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView2.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.MultiSelect = false;
@@ -803,66 +1018,13 @@
             // 
             this.fun_getPrescriptionByPatIDTableAdapter.ClearBeforeFill = true;
             // 
-            // TabTd
-            // 
-            this.TabTd.Controls.Add(this.richTextBox1);
-            this.TabTd.Location = new System.Drawing.Point(4, 38);
-            this.TabTd.Name = "TabTd";
-            this.TabTd.Padding = new System.Windows.Forms.Padding(3);
-            this.TabTd.Size = new System.Drawing.Size(1303, 629);
-            this.TabTd.TabIndex = 6;
-            this.TabTd.Text = "Treatment Detail";
-            this.TabTd.UseVisualStyleBackColor = true;
-            // 
-            // tpdateDataGridViewTextBoxColumn
-            // 
-            this.tpdateDataGridViewTextBoxColumn.DataPropertyName = "tp_date";
-            this.tpdateDataGridViewTextBoxColumn.FillWeight = 50F;
-            this.tpdateDataGridViewTextBoxColumn.HeaderText = "កាលបរិច្ឆេទ";
-            this.tpdateDataGridViewTextBoxColumn.Name = "tpdateDataGridViewTextBoxColumn";
-            this.tpdateDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sdnameDataGridViewTextBoxColumn
-            // 
-            this.sdnameDataGridViewTextBoxColumn.DataPropertyName = "sd_name";
-            this.sdnameDataGridViewTextBoxColumn.HeaderText = "សេវាកម្ម";
-            this.sdnameDataGridViewTextBoxColumn.Name = "sdnameDataGridViewTextBoxColumn";
-            this.sdnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tp_amount
-            // 
-            this.tp_amount.DataPropertyName = "tp_amount";
-            this.tp_amount.HeaderText = "ចំនូន";
-            this.tp_amount.Name = "tp_amount";
-            this.tp_amount.ReadOnly = true;
-            // 
-            // docnameDataGridViewTextBoxColumn
-            // 
-            this.docnameDataGridViewTextBoxColumn.DataPropertyName = "doc_name";
-            this.docnameDataGridViewTextBoxColumn.FillWeight = 70F;
-            this.docnameDataGridViewTextBoxColumn.HeaderText = "ឈ្មោះវេជ្ជបណ្ឌិត";
-            this.docnameDataGridViewTextBoxColumn.Name = "docnameDataGridViewTextBoxColumn";
-            this.docnameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.fungetPatientTdByPatIDBindingSource, "td_des", true));
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(1297, 623);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            // 
-            // fungetPatientTdByPatIDBindingSource
-            // 
-            this.fungetPatientTdByPatIDBindingSource.DataMember = "fun_getPatientTdByPatID";
-            this.fungetPatientTdByPatIDBindingSource.DataSource = this.dentistDataSet;
-            // 
             // fun_getPatientTdByPatIDTableAdapter
             // 
             this.fun_getPatientTdByPatIDTableAdapter.ClearBeforeFill = true;
+            // 
+            // fun_getPatientDiagnoseByIDTableAdapter
+            // 
+            this.fun_getPatientDiagnoseByIDTableAdapter.ClearBeforeFill = true;
             // 
             // frm_patient_information
             // 
@@ -892,14 +1054,17 @@
             this.tabXray.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fungetPatientXrayByPatIDBindingSource)).EndInit();
+            this.tabDiag.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fungetPatientDiagnoseByIDBindingSource)).EndInit();
             this.tabTP.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fungetAllPatientServiceBindingSource)).EndInit();
+            this.TabTd.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.fungetPatientTdByPatIDBindingSource)).EndInit();
             this.tabPs.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fungetPrescriptionByPatIDBindingSource)).EndInit();
-            this.TabTd.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.fungetPatientTdByPatIDBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -979,5 +1144,12 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.BindingSource fungetPatientTdByPatIDBindingSource;
         private DentistDataSetTableAdapters.fun_getPatientTdByPatIDTableAdapter fun_getPatientTdByPatIDTableAdapter;
+        private System.Windows.Forms.BindingSource fungetPatientDiagnoseByIDBindingSource;
+        private DentistDataSetTableAdapters.fun_getPatientDiagnoseByIDTableAdapter fun_getPatientDiagnoseByIDTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teethnumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teethpointDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teethconditionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn teethdetailDataGridViewTextBoxColumn;
+        private Grid dgvDiag;
     }
 }

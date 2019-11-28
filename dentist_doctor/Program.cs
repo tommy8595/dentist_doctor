@@ -16,7 +16,7 @@ namespace dentist_doctor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_doc_diagnosis());
+            Application.Run(new frm_doc_login());
         }
     }
 }

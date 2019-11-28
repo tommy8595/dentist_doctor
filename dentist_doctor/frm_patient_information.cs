@@ -46,6 +46,10 @@ namespace dentist_doctor
                 {
                     this.fun_getPatientTdByPatIDTableAdapter.Fill(this.dentistDataSet.fun_getPatientTdByPatID, int.Parse(pat_id));
                 }
+                else if (TC.SelectedTab == tabDiag)
+                {
+                    this.fun_getPatientDiagnoseByIDTableAdapter.Fill(this.dentistDataSet.fun_getPatientDiagnoseByID, int.Parse(pat_id));
+                }
             }
             catch (Exception t)
             {

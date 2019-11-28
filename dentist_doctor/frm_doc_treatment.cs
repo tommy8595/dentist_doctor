@@ -167,7 +167,7 @@ namespace dentist_doctor
 
         private void OpenXray()
         {
-            Application.Run(new frm_patient_Xray());
+            Application.Run(new frm_doc_diagnosis());
         }
 
         private void btnNext_Click(object sender, EventArgs e)

@@ -92,7 +92,7 @@ namespace dentist_doctor
 
         private void OpenTreatmentPlan()
         {
-            Application.Run(new frm_doc_treatment());
+            Application.Run(new frm_doc_diagnosis());
         }
     }
 }

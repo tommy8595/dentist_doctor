@@ -89,6 +89,7 @@ namespace dentist_doctor
             {
                 StoreProcedure.spd_update_patientTreatmentDetail(GlobalVariable._Pat_id, txtTD.Text);
                 MyMSB.Show("ការរក្សាទុកបានជោគជ័យ", "1", false);
+                str = txtTD.Text;
             }
             catch (Exception t)
             {
