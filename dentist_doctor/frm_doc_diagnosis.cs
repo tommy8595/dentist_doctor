@@ -14,7 +14,7 @@ namespace dentist_doctor
     {
       
         private int cus_id = 1;
-        private DataTable dt = new DataTable();
+        private DataTable dt = new DataTable(); 
         private void cbo_doc_diagnosis_Click(object sender, EventArgs e)
         {
         }
