@@ -40,6 +40,11 @@ namespace dentist_doctor
             dgv_teeth.DataSource = dt;
             dgv_teeth.AutoSizeColumnsMode= DataGridViewAutoSizeColumnsMode.Fill;
             dgv_doc_diagnosis.DataSource = StoreProcedure.get_teeth(cus_id);
+            dgv_doc_diagnosis.AutoSizeColumnsMode= DataGridViewAutoSizeColumnsMode.Fill;
+            foreach (DataGridViewRow x in dgv_doc_diagnosis.Rows)
+            {
+                x.MinimumHeight = 50;
+            }
 
         }
 
@@ -123,6 +128,15 @@ namespace dentist_doctor
                 e.Handled = true;
             }
            
+        }
+
+        private void dgv_doc_diagnosis_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            foreach (DataGridViewBand band in dgv_doc_diagnosis.Columns)
+            {
+                band.ReadOnly = true;
+            }
+            dgv_doc_diagnosis.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
         }
     }
 }

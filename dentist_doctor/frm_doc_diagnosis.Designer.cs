@@ -41,6 +41,8 @@
             this.dgv_teeth = new System.Windows.Forms.DataGridView();
             this.dgv_doc_diagnosis = new System.Windows.Forms.DataGridView();
             this.btn_doc_diagnosis_back = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.dgv_add.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_teeth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_doc_diagnosis)).BeginInit();
@@ -185,7 +187,7 @@
             this.dgv_add.Location = new System.Drawing.Point(50, 459);
             this.dgv_add.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_add.Name = "dgv_add";
-            this.dgv_add.Size = new System.Drawing.Size(2218, 372);
+            this.dgv_add.Size = new System.Drawing.Size(2218, 258);
             this.dgv_add.TabIndex = 9;
             // 
             // dgv_teeth
@@ -194,23 +196,24 @@
             this.dgv_teeth.Location = new System.Drawing.Point(3, 3);
             this.dgv_teeth.Name = "dgv_teeth";
             this.dgv_teeth.RowTemplate.Height = 33;
-            this.dgv_teeth.Size = new System.Drawing.Size(2212, 366);
+            this.dgv_teeth.Size = new System.Drawing.Size(2212, 255);
             this.dgv_teeth.TabIndex = 0;
             // 
             // dgv_doc_diagnosis
             // 
             this.dgv_doc_diagnosis.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_doc_diagnosis.Location = new System.Drawing.Point(50, 836);
+            this.dgv_doc_diagnosis.Location = new System.Drawing.Point(47, 765);
             this.dgv_doc_diagnosis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgv_doc_diagnosis.Name = "dgv_doc_diagnosis";
             this.dgv_doc_diagnosis.RowHeadersWidth = 51;
             this.dgv_doc_diagnosis.RowTemplate.Height = 24;
-            this.dgv_doc_diagnosis.Size = new System.Drawing.Size(2218, 346);
+            this.dgv_doc_diagnosis.Size = new System.Drawing.Size(2218, 497);
             this.dgv_doc_diagnosis.TabIndex = 10;
+            this.dgv_doc_diagnosis.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_doc_diagnosis_CellClick);
             // 
             // btn_doc_diagnosis_back
             // 
-            this.btn_doc_diagnosis_back.Location = new System.Drawing.Point(50, 1233);
+            this.btn_doc_diagnosis_back.Location = new System.Drawing.Point(50, 1272);
             this.btn_doc_diagnosis_back.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_doc_diagnosis_back.Name = "btn_doc_diagnosis_back";
             this.btn_doc_diagnosis_back.Size = new System.Drawing.Size(228, 62);
@@ -218,12 +221,32 @@
             this.btn_doc_diagnosis_back.Text = "back";
             this.btn_doc_diagnosis_back.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(48, 735);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(178, 25);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "History Of patient";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(48, 409);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 25);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Add New record";
+            // 
             // frm_doc_diagnosis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(2373, 1333);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_doc_diagnosis_back);
             this.Controls.Add(this.dgv_doc_diagnosis);
             this.Controls.Add(this.dgv_add);
@@ -263,5 +286,7 @@
         private System.Windows.Forms.DataGridView dgv_doc_diagnosis;
         private System.Windows.Forms.Button btn_doc_diagnosis_back;
         private System.Windows.Forms.DataGridView dgv_teeth;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

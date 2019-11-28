@@ -260,7 +260,7 @@ namespace dentist_doctor
                 using (con = new SqlConnection(connectionString))
                 {
              
-                    SqlCommand cdm = new SqlCommand("select * from tbl_teeth where pat_id=" + user_id.ToString(),con);
+                    SqlCommand cdm = new SqlCommand("select * from tbl_teeth where pat_id=" + user_id.ToString() + " order by teeth_number asc", con);
                     SqlDataAdapter adp = new SqlDataAdapter(cdm);
                     adp.Fill(dt);
                     dt.Columns.RemoveAt(0);
