@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_doc_code = new System.Windows.Forms.TextBox();
             this.btn_doc_submit = new System.Windows.Forms.Button();
@@ -53,6 +53,7 @@
             this.fullKhName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pat_tel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dentistDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fun_getPatientCodeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllPatient)).BeginInit();
@@ -63,20 +64,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 585);
+            this.label1.Location = new System.Drawing.Point(24, 583);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 24);
+            this.label1.Size = new System.Drawing.Size(69, 24);
             this.label1.TabIndex = 3;
-            this.label1.Text = "code";
+            this.label1.Text = "CODE:";
             // 
             // txt_doc_code
             // 
             this.txt_doc_code.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_doc_code.Location = new System.Drawing.Point(84, 582);
+            this.txt_doc_code.Location = new System.Drawing.Point(96, 579);
             this.txt_doc_code.Margin = new System.Windows.Forms.Padding(2);
             this.txt_doc_code.Name = "txt_doc_code";
-            this.txt_doc_code.Size = new System.Drawing.Size(350, 32);
+            this.txt_doc_code.Size = new System.Drawing.Size(149, 32);
             this.txt_doc_code.TabIndex = 2;
             this.txt_doc_code.Text = "15752";
             // 
@@ -155,7 +156,7 @@
             "តាមរយៈឈ្មោះ(ខ្មែរ)",
             "តាមរយៈលេខសម្គាល់",
             "តាមរយៈឈ្មោះ(អង់គ្លេស)"});
-            this.cboSearchChoice.Location = new System.Drawing.Point(542, 22);
+            this.cboSearchChoice.Location = new System.Drawing.Point(542, 10);
             this.cboSearchChoice.Name = "cboSearchChoice";
             this.cboSearchChoice.Size = new System.Drawing.Size(196, 35);
             this.cboSearchChoice.TabIndex = 14;
@@ -168,10 +169,10 @@
             this.btn_Patient_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Patient_Search.Font = new System.Drawing.Font("Khmer OS Battambang", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Patient_Search.ForeColor = System.Drawing.Color.White;
-            this.btn_Patient_Search.Location = new System.Drawing.Point(1058, 25);
+            this.btn_Patient_Search.Location = new System.Drawing.Point(1058, 11);
             this.btn_Patient_Search.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Patient_Search.Name = "btn_Patient_Search";
-            this.btn_Patient_Search.Size = new System.Drawing.Size(101, 28);
+            this.btn_Patient_Search.Size = new System.Drawing.Size(103, 32);
             this.btn_Patient_Search.TabIndex = 13;
             this.btn_Patient_Search.Text = "ស្វែងរក";
             this.btn_Patient_Search.UseVisualStyleBackColor = false;
@@ -181,7 +182,7 @@
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Khmer OS Battambang", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(752, 21);
+            this.txtSearch.Location = new System.Drawing.Point(752, 9);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(299, 36);
@@ -195,7 +196,7 @@
             this.btnPatientDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPatientDetail.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPatientDetail.ForeColor = System.Drawing.Color.White;
-            this.btnPatientDetail.Location = new System.Drawing.Point(998, 61);
+            this.btnPatientDetail.Location = new System.Drawing.Point(998, 49);
             this.btnPatientDetail.Margin = new System.Windows.Forms.Padding(2);
             this.btnPatientDetail.Name = "btnPatientDetail";
             this.btnPatientDetail.Size = new System.Drawing.Size(163, 32);
@@ -208,20 +209,20 @@
             // 
             this.dgvAllPatient.AllowUserToAddRows = false;
             this.dgvAllPatient.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(178)))), ((int)(((byte)(73)))));
-            this.dgvAllPatient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(178)))), ((int)(((byte)(73)))));
+            this.dgvAllPatient.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvAllPatient.AutoGenerateColumns = false;
             this.dgvAllPatient.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvAllPatient.BackgroundColor = System.Drawing.Color.White;
             this.dgvAllPatient.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Khmer OS Battambang", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAllPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Khmer OS Battambang", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAllPatient.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvAllPatient.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAllPatient.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.pat_id,
@@ -229,14 +230,14 @@
             this.fullname,
             this.pat_tel});
             this.dgvAllPatient.DataSource = this.fungetAllPatientBindingSource;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAllPatient.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAllPatient.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvAllPatient.Location = new System.Drawing.Point(14, 96);
             this.dgvAllPatient.Margin = new System.Windows.Forms.Padding(2);
             this.dgvAllPatient.MultiSelect = false;
@@ -287,11 +288,29 @@
             this.pat_tel.Name = "pat_tel";
             this.pat_tel.ReadOnly = true;
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(254)))), ((int)(((byte)(178)))), ((int)(((byte)(73)))));
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Khmer OS Battambang", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.Color.White;
+            this.btnBack.Location = new System.Drawing.Point(941, 616);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(220, 66);
+            this.btnBack.TabIndex = 91;
+            this.btnBack.Text = "ត្រលប់ក្រោយ";
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // frm_doc_code
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1186, 693);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnPatientDetail);
             this.Controls.Add(this.dgvAllPatient);
             this.Controls.Add(this.cboSearchChoice);
@@ -342,5 +361,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fullKhName;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullname;
         private System.Windows.Forms.DataGridViewTextBoxColumn pat_tel;
+        private System.Windows.Forms.Button btnBack;
     }
 }

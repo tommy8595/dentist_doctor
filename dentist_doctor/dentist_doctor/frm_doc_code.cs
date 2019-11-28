@@ -22,6 +22,8 @@ namespace dentist_doctor
         {
             try
             {
+                this.AcceptButton = btn_doc_submit;
+                this.CancelButton = btnBack;
                 txt_doc_code.KeyPress += new KeyPressEventHandler(EventHandlerr.TextBoxNumberOnly);
                 this.fun_getAllPatientTableAdapter.Fill(this.dentistDataSet.fun_getAllPatient);
                 this.fun_getAllPatientTableAdapter.Fill(this.dentistDataSet.fun_getAllPatient);
@@ -109,6 +111,19 @@ namespace dentist_doctor
         private void openInformation()
         {   
             Application.Run(new frm_patient_information(GlobalVariable._Pat_id, GlobalVariable._Pat_name));
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread th = new Thread(openLogin);
+            th.SetApartmentState(ApartmentState.STA);
+            th.Start();
+        }
+
+        private void openLogin()
+        {
+            Application.Run(new frm_doc_login());
         }
     }
 }

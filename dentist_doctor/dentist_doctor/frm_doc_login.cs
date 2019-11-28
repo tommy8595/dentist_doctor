@@ -37,24 +37,38 @@ namespace dentist_doctor
                 if (HasUser)
                 {
                     dt = this.fun_getDoctorLoginTableAdapter.GetData(txt_doc_username.Text, txt_doc_password.Text);
-                    GlobalVariable._User_name = dt.Rows[0]["emp_name"].ToString();
-                    GlobalVariable._User_id = dt.Rows[0]["emp_id"].ToString();
-                    GlobalVariable._User_role = dt.Rows[0]["emp_role"].ToString();
-                    con.Close();
-                    this.Close();
-                    Thread th = new Thread(openCode);
-                    th.SetApartmentState(ApartmentState.STA);
-                    th.Start();
+                    if (dt.Rows.Count > 0)
+                    {
+                        GlobalVariable._User_name = dt.Rows[0]["emp_name"].ToString();
+                        GlobalVariable._User_id = dt.Rows[0]["emp_id"].ToString();
+                        GlobalVariable._User_role = dt.Rows[0]["emp_role"].ToString();
+                        con.Close();
+                        if (GlobalVariable._User_role == "doctor" || GlobalVariable._User_role == "admin")
+                        {
+                            this.Close();
+                            Thread th = new Thread(openCode);
+                            th.SetApartmentState(ApartmentState.STA);
+                            th.Start();
+                        }
                     }
+                    else
+                    {
+                        MyMSB.Show("អ្នកមិនមានសិទ្ធក្នុងការប្រើប្រាស់ឡើយ។", "0", false);
+                        txt_doc_password.Text = "";
+                        txt_doc_username.Text = "";
+                        txt_doc_username.Focus();
+                    }
+
+                }
                 else
                 {
-                    con.Close();
+                    
                     MyMSB.Show("ឈ្មោះ និង លេខសម្ងាត់មិនត្រឹមត្រូវ", "0", false);
                     txt_doc_password.Text = "";
                     txt_doc_username.Text = "";
                     txt_doc_username.Focus();
                 }
-
+                con.Close();
             }
             catch (Exception t )
             {
